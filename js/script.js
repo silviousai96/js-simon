@@ -26,7 +26,7 @@ alert(arrayRandom);
 
 //uso la funzione setTimeout per chiedere dopo 30 sec. i 5 numeri all'utente attraverso un ciclo for
 
-var timerSeconds = 3 * 1000;
+var timerSeconds = 30 * 1000;
 
 setTimeout(function() {
     
