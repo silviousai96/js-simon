@@ -11,7 +11,7 @@ function getRndInteger(min, max) {
   }
 
 
-//1. genero 5 numeri casuali e gli metto in un array
+// genero 5 numeri casuali e gli metto in un array
 var arrayRandom = [];
 
   while( arrayRandom.length < 5 ) {
@@ -24,4 +24,30 @@ var arrayRandom = [];
 //alert con i 5 numeri casuali da ricordare
 alert(arrayRandom);
 
-//2. 
+//uso la funzione setTimeout per chiedere dopo 30 sec. i 5 numeri all'utente attraverso un ciclo for
+
+var timerSeconds = 3 * 1000;
+
+setTimeout(function() {
+    
+    var arrayUtente = [];
+    
+    for( var i=0; i < 5; i++ ) {
+        var numUtente;
+        numUtente = parseInt( prompt("Inserisci numero visto: "));
+        //vedo se il numero inserito dall'utente è nella lista di numeri generata dal computer, 
+        //se è vero, gli aggiunge ai numeri dell'utente ricordati.
+        if (arrayRandom.includes(numUtente) ) {
+            arrayUtente.push(numUtente);
+            
+        }
+            
+    }
+    //stampo all'utente con un alert quanti e quali numeri ha ricordato.
+    alert("Hai indovinato " + arrayUtente.length + " numeri. I numeri sono: " + arrayUtente);
+}, timerSeconds);
+
+
+
+
+
